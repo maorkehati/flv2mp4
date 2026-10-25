@@ -28,6 +28,8 @@ scratch/
 tests/_data/
 *.flv
 *.FLV
+# The one committed sample (stored with Git LFS, see .gitattributes)
+!samples/1.FLV
 *.mp4
 *.mkv
 *.mka

@@ -46,6 +46,8 @@ python -m venv .venv
 .\.venv\Scripts\python.exe -m pip install -r requirements.txt
 ```
 
+**Sample episode.** `samples/1.FLV` is the original Avatar episode 1 FLV: 141,239,386 bytes, SHA-256 `DDCF750FDC242B7AD23188811D76EDB0A62D0F7D172839BDEF12C3E876FC446D`. It exceeds GitHub's 100 MiB file limit, so it is stored with Git LFS. Install Git LFS (`git lfs install`) before cloning, or run `git lfs pull` afterwards, to get the video instead of a pointer file. Example: `.\.venv\Scripts\python.exe convert.py samples\1.FLV --start 00:01:53 --duration 20`.
+
 No third-party code is modified. The wrapper works around Video2X 6.4.0's behaviour from the outside (see "Backend behaviour" below), so there are no patches to apply.
 
 Other installations can be used with `--video2x`, `--ffmpeg` and `--ffprobe`. Without those flags,
