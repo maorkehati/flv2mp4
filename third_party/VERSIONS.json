@@ -1,0 +1,44 @@
+{
+  "recorded": "2026-10-24",
+  "video2x": {
+    "release": "6.4.0",
+    "release_published": "2025-01-24T23:33:33Z",
+    "asset": "https://github.com/k4yt3x/video2x/releases/download/6.4.0/video2x-windows-amd64.zip",
+    "asset_sha256": "0337B6DCAE2BAD2FD13E43FBDB73EF728D2F6289F37CC3617E87AC3A1A5CF793",
+    "install_dir": "third_party/video2x-6.4.0",
+    "source_repository": "https://github.com/k4yt3x/video2x",
+    "source_tag": "6.4.0",
+    "source_commit": "a96bda9b4d79616cc6b71b94e6945146b5b4d509",
+    "source_dir": "third_party/video2x-src",
+    "bundled_libav": "avcodec-61 / avformat-61 (FFmpeg 7.1 series DLLs inside the release)"
+  },
+  "ffmpeg": {
+    "version": "9.0.2",
+    "build": "gyan.dev essentials_build (GPL, static)",
+    "asset": "https://github.com/GyanD/codexffmpeg/releases/download/9.0.2/ffmpeg-9.0.2-essentials_build.zip",
+    "asset_sha256": "60F467265B1E312373DBCD92200C2618A74850F98D3D078E94296BB3FA2047BA",
+    "install_dir": "third_party/ffmpeg-9.0.2-essentials_build/bin"
+  },
+  "models": {
+    "source": "bundled in the Video2X 6.4.0 release (models/realesrgan); identical to the files in the source repository at commit a96bda9b",
+    "upstream_crosscheck": {
+      "asset": "https://github.com/xinntao/Real-ESRGAN/releases/download/v0.2.5.0/realesrgan-ncnn-vulkan-20220424-windows.zip",
+      "asset_sha256": "ABC02804E17982A3BE33675E4D471E91EA374E65B70167ABC09E31ACB412802D",
+      "result": ".bin weights byte-identical; .param graphs identical apart from CRLF vs LF line endings"
+    },
+    "realesr-animevideov3-x2": {
+      "param": "1393f7c0e885f9d15a0668329a13f695ebd0ea45791f46d28145d7934824d224",
+      "bin": "548a36f9c3f4ab8da56cd3b13badf23968bee207b396dad14d04b830e5f2ab2d"
+    },
+    "realesr-animevideov3-x3": {
+      "param": "584a43e429188c159ef8e42191ef5a5fd1d2e3b17398e5cee6089726dec879c7",
+      "bin": "548a36f9c3f4ab8da56cd3b13badf23968bee207b396dad14d04b830e5f2ab2d"
+    },
+    "realesr-animevideov3-x4": {
+      "param": "157c0a10405f885d4c53ce76fe2ba731694bcd16ec90ab6b889335e384239682",
+      "bin": "548a36f9c3f4ab8da56cd3b13badf23968bee207b396dad14d04b830e5f2ab2d"
+    },
+    "note": "x2 and x3 graphs run the native x4 network and then resize (bicubic) inside the graph, so their inference cost equals x4"
+  },
+  "python_packages": "see requirements.txt (av 19.0.2 bundles FFmpeg 9.0.2 libraries, numpy 2.5.4, pytest 9.1.1)"
+}

@@ -1,0 +1,61 @@
+# Python environments, caches, compiled files
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Third-party downloads, executables, model weights and checkouts (see third_party/VERSIONS.json
+# and scripts/setup_tools.ps1); only the version manifest is tracked
+third_party/*
+!third_party/VERSIONS.json
+*.exe
+*.dll
+*.lib
+*.zip
+*.7z
+*.pth
+*.onnx
+
+# Source episodes, media, converted videos, previews and generated outputs
+input/
+output/
+previews/
+scratch/
+tests/_data/
+*.flv
+*.FLV
+*.mp4
+*.mkv
+*.mka
+*.m4a
+*.wav
+*.mov
+*.avi
+*.webm
+
+# Temporary files, logs, run reports, undo logs
+.animenhance-tmp/
+*.partial*.mp4
+*.tmp
+*.log
+*.report.json
+*.failed.report.json
+batch_summary_*.json
+rename_logs/
+
+# Credentials and machine-local configuration
+.env
+.env.*
+*.pem
+*.key
+*.pfx
+id_rsa*
+id_ed25519*
+*.local.json
+.vscode/
+.idea/
+.cursor/
